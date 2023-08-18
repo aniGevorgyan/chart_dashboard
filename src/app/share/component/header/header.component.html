@@ -1,0 +1,20 @@
+<div class="header navbar navbar-light bg-light py-3">
+  <div class="container w-100">
+    <div class="header__filter w-100">
+      <div class="row">
+        <div class="col-3">
+          <select class="form-select" aria-label="Default select example" (change)="setProductCount($event)">
+            <option selected disabled [value]="0">Select Products Count</option>
+            <option *ngFor="let options of productCount" value="{{options}}">{{options}}</option>
+          </select>
+        </div>
+        <div class="col-3">
+          <select class="form-select" aria-label="Default select example" (change)="setCombineType($event)">
+            <option selected disabled [value]="-1">Combine Charts</option>
+            <option *ngFor="let options of combineChartType; let i = index" value="{{i}}">{{options}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
